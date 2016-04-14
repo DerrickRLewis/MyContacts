@@ -12,39 +12,49 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:layout_alignParentBottom="true"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText2"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
-            android:inputType="phone" />
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
 
         <ListView
-            android:layout_width="205dp"
+            android:layout_width="350dp"
             android:layout_height="200dp"
             android:id="@+id/listView"
-            android:layout_weight="724.80" />
+            android:contextClickable="false"
+            android:nestedScrollingEnabled="true"
+            android:smoothScrollbar="false"
+            android:clickable="false"
+            android:longClickable="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true" />
     </LinearLayout>
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_gravity="bottom"
+        android:inputType="number|phone"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:phoneNumber="true" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:inputType="textPersonName|textAutoComplete|textAutoCorrect|text"
+        android:layout_gravity="bottom"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/button"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
